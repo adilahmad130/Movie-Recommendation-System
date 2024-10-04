@@ -123,13 +123,14 @@ if st.button("Show Recommendation"):
     col1, col2, col3, col4, col5 = st.columns(5)
 
     # Display first recommendation
+
     with col1:
         st.text(recommended_names[0])
         st.image(recommended_posters[0])
         trailer_url = fetch_trailer(recommended_movie_ids[0])
         if trailer_url:
             st.video(trailer_url)
-
+            
     # Display second recommendation
     with col2:
         st.text(recommended_names[1])
@@ -161,3 +162,4 @@ if st.button("Show Recommendation"):
         trailer_url = fetch_trailer(recommended_movie_ids[4])
         if trailer_url:
             st.video(trailer_url)
+
